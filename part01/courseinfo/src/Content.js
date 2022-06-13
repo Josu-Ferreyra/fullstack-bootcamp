@@ -1,7 +1,7 @@
 import Part from "./Part";
 
-function Content({parts}){
-  const part = parts.map(part => part)
+function Content({course}){
+  const part = course.parts.map(part => part)
   return(
     <div>
       <Part part={part[0]}/>
