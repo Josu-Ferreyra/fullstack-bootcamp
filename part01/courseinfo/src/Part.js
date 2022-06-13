@@ -1,7 +1,8 @@
-function Part({part, exercises}){
-
+function Part({part}){
+  const {name} = part
+  const {exercises} = part
   return (
-      <p>{part} {exercises}</p>
+      <p>{name} {exercises}</p>
   )
 }
 
