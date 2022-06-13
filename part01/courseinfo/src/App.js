@@ -1,5 +1,5 @@
 import Header from './Header'
-import Content from './Content';
+import Part from './Part';
 import Total from './Total';
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
   return (
     <div>
       <Header course={course} />
-      <Content part={part1} exercises={exercises1}/>
-      <Content part={part2} exercises={exercises2}/>
-      <Content part={part3} exercises={exercises3}/>
+      <Part part={part1} exercises={exercises1}/>
+      <Part part={part2} exercises={exercises2}/>
+      <Part part={part3} exercises={exercises3}/>
       <Total exercises={[exercises1, exercises2, exercises3]}/>
     </div>
   );
