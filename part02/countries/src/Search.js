@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export function Search({countries, setFilterCountries}){
+export function Search({countries, setFilterCountries, setShowCountry}){
   const [search, setSearch] = useState('')
 
   useEffect(()=>{
@@ -15,6 +15,7 @@ export function Search({countries, setFilterCountries}){
   const handleSearch = e => {
     const input = e.target.value
     setSearch(input)
+    setShowCountry([false, undefined])
   }
   
   return(
