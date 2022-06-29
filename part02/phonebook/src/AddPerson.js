@@ -1,4 +1,16 @@
+import { postPersons } from "./services/persons/persons"
+
 export function AddPerson({persons, setPersons}) {
+  
+  const handleInputs = (e) => {
+    const values = []
+    for (let i = 0; i < e.target.length - 1; i ++){
+      // console.log(e.target[i])
+      values.push(e.target[i].value)
+      e.target[i].value = ''
+    }
+    return values
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     const [newName, newNumber] = handleInputs(e);
@@ -18,17 +30,12 @@ export function AddPerson({persons, setPersons}) {
     })
     isDuplicate
     ? alert(`${newPerson.name} is already added to phonebook`)
-    : setPersons(prev => [...prev, newPerson])
+    : setPersons(prev => {
+      postPersons(newPerson)
+      return [...prev, newPerson]
+    })    
   }
-  const handleInputs = (e) => {
-    const values = []
-    for (let i = 0; i < e.target.length - 1; i ++){
-      // console.log(e.target[i])
-      values.push(e.target[i].value)
-      e.target[i].value = ''
-    }
-    return values
-  }
+
   return(
     <div>
       <h2>add a new</h2>

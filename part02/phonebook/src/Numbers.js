@@ -1,6 +1,5 @@
 export function Numbers ({persons, filter}) {
-  console.log('EJECUTANDO NUMBERS...')
-  
+  console.log('EJECUTANDO NUMBERS...')  
   return(
     <div>
       <h2>Numbers</h2>
