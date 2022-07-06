@@ -1,0 +1,18 @@
+.notification{
+  padding: 15px;
+  margin: 10px 0;
+  max-width: 50%;
+}
+.error{
+  background-color: #000;
+  border: 3px solid #ff0000;
+  color: #ff0000;
+}
+.normal {
+  background-color: #fff;
+  border: 3px solid #15ff00;
+  color: #15ff00;
+}
+.dissabled{
+  display: none;
+}
