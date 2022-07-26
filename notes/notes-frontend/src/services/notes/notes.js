@@ -1,12 +1,12 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001'
+const baseUrl = '/api/notes'
 
 async function getNotes () {
-  const notes = await axios.get(`${baseUrl}/api/notes`)
+  const notes = await axios.get(`${baseUrl}`)
   return notes.data
 }
-const postNote = (note) => axios.post(`${baseUrl}/api/notes`, note)
-const deleteNote = (id) => axios.delete(`${baseUrl}/api/notes/${id}`)
+const postNote = (note) => axios.post(`${baseUrl}`, note)
+const deleteNote = (id) => axios.delete(`${baseUrl}/${id}`)
 
 export {
   getNotes,
